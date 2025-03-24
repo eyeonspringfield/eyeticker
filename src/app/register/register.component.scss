@@ -1,0 +1,24 @@
+@use '../../styles';
+@use '@angular/material' as mat;
+
+#signup-container{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+
+  mat-checkbox{
+    @include mat.checkbox-overrides((
+      label-text-color: black,
+      unselected-icon-color: black,
+      unselected-hover-icon-color: grey,
+      unselected-focus-icon-color: grey
+    ));
+
+    margin: 10px 0;
+  }
+}
+
+@include styles.formatAuth(#signup);

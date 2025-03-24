@@ -1,0 +1,32 @@
+<div id="signup-container">
+  <div id="signup">
+    <p>Register an account for free</p>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Username</mat-label>
+      <input matInput [(ngModel)]="username" [required]="true">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Email address</mat-label>
+      <input matInput [(ngModel)]="email" [required]="true">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input type="password" [(ngModel)]="password" matInput [required]="true">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Confirm password</mat-label>
+      <input type="password" [(ngModel)]="confirmPassword" matInput [required]="true">
+    </mat-form-field>
+
+    <mat-checkbox>I understand that trading and investing involve risk. Prices may fluctuate, and I could lose more than my initial investment. I understand and accept that Eyeticker does not provide financial advice.</mat-checkbox>
+
+    <div id="buttons">
+      <button mat-flat-button (click)="onSignup()">Register</button>
+    </div>
+  </div>
+
+</div>

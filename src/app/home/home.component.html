@@ -1,0 +1,70 @@
+<div id="home-container">
+  <h1>Welcome to Eyeticker!</h1>
+
+  <p>Eyeticker is the #1 exchange rate information platform, containing information about Forex, Stocks, Crypto and
+    other assets.</p>
+
+  <p>Eyeticker is completely free for updates of up to 5 times per minute, with paid tiers for real time market
+    data.</p>
+
+  <p>Make informed trades and complete transactions with confidence while using Eyeticker!</p>
+
+  <p>Compare plans:</p>
+
+  <div id="tiers-card-container">
+    <app-tier *ngFor="let tier of tierDataSource"
+              [title]="tier.title"
+              [description]="tier.description"
+              [api_access]="tier.api_access"
+              [support]="tier.support"
+              [price]="tier.price"
+    ></app-tier>
+  </div>
+
+  <div id="hero-section">
+    <h1>Your Ultimate Exchange Rate Platform</h1>
+    <p>Get real-time exchange rates, market insights, and more.</p>
+    <button mat-flat-button color="primary" routerLink="/register">Get Started</button>
+  </div>
+
+  <div id="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <span>What is Eyeticker?</span>
+        </mat-expansion-panel-header>
+        <p>Eyeticker is a platform that provides real-time exchange rate information for Forex, Stocks, Crypto and other assets.</p>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <span>Can I trade using Eyeticker?</span>
+        </mat-expansion-panel-header>
+        <p>While trading directly on our platform is not currently possible, Eyeticker is designed to be a tool for investors to use to make informed transactions using real-time market data and useful market insights.</p>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <span>Is there a free plan?</span>
+        </mat-expansion-panel-header>
+        <p>Yes! You can access up to 5 updates per minute for free for any ticker.</p>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <span>How do I upgrade my plan?</span>
+        </mat-expansion-panel-header>
+        <p>After registering a free account, you can upgrade your account to a paid account in the settings page. Switching plans is also available in the settings page.</p>
+        <p>For special requirements and pricing, please contact our Sales Support team: sales&#64;eyeticker.web.app</p>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <span>Are there any discounts, or bulk plans?</span>
+        </mat-expansion-panel-header>
+        <p>No. There are no bulk plans or discounts, each plan is a flat amount per month, every month, forever.</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>

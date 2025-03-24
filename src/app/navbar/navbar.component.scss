@@ -1,0 +1,70 @@
+@use '../../styles';
+
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  padding: 0 16px;
+  box-shadow: styles.$container-shadow;
+
+  .mobile-menu-button {
+    display: block;
+    margin: 0;
+    @media(min-width: 768px){
+      display: none;
+    }
+  }
+
+  .nav-links {
+    visibility: hidden;
+    opacity: 0;
+    background-color: #c2185b;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    box-shadow: styles.$container-shadow;
+    padding: 10px;
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+
+    button {
+      width: 100%;
+      text-align: left;
+      margin: 5px 0;
+    }
+
+    @media(min-width: 768px){
+      display: flex;
+      visibility: visible;
+      opacity: 1;
+      flex-direction: row;
+      position: static;
+      width: auto;
+      background: none;
+      box-shadow: none;
+      padding: 0;
+
+      button {
+        margin: 0 10px;
+        width: auto;
+        text-align: center;
+      }
+    }
+  }
+
+  .nav-links.show {
+    opacity: 100%;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s;
+  }
+
+  .active {
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: styles.$container-shadow;
+  }
+}

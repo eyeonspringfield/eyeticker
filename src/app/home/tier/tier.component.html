@@ -1,0 +1,17 @@
+<mat-card appearance="raised">
+  <mat-card-header>
+    {{ title }}
+  </mat-card-header>
+  <mat-card-content>
+    <p id="tier-description">{{ description }}</p>
+    <mat-list role="list">
+      <mat-list-item role="listitem">✔ {{ api_access }}</mat-list-item>
+      <mat-list-item role="listitem">✔ {{ support }}</mat-list-item>
+    </mat-list>
+    <p id="tier-price">Price: {{ price }}</p>
+  </mat-card-content>
+  <mat-card-footer>
+    <p *ngIf="!price?.startsWith('Fr')">For individuals only. Flat rate price. Additional fees and taxes may apply.</p>
+    <p *ngIf="price?.startsWith('Fr')">For individuals only. Registration required.</p>
+  </mat-card-footer>
+</mat-card>

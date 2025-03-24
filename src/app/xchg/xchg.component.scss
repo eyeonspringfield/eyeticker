@@ -1,0 +1,26 @@
+@use '../../styles';
+
+#exchange-terminal {
+  width: 90%;
+  height: calc(100vh - 100px);
+  margin: 80px auto auto auto;
+  padding: 20px;
+  background: linear-gradient(-120deg, #c2185b, #00796b);
+  background-size: 300% 300%;
+  animation: gradientAnimation 8s ease infinite;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+
+  @media (min-width: 768px) {
+    height: calc(85vh - 80px);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+}
