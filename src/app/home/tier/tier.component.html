@@ -8,7 +8,7 @@
       <mat-list-item role="listitem">✔ {{ api_access }}</mat-list-item>
       <mat-list-item role="listitem">✔ {{ support }}</mat-list-item>
     </mat-list>
-    <p id="tier-price">Price: {{ price }}</p>
+    <p id="tier-price">{{ price }}</p>
   </mat-card-content>
   <mat-card-footer>
     <p *ngIf="!price?.startsWith('Fr')">For individuals only. Flat rate price. Additional fees and taxes may apply.</p>

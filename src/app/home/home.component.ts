@@ -18,8 +18,8 @@ import {RouterLink} from '@angular/router';
 export class HomeComponent {
   TIERS: Tier[] = [
     {title: "Free", description: "For the casual trader", price: "Free", api_access: "Up to 5 updates per minute", support: "Standard support"},
-    {title: "Premium", description: "Premium access, low price", price: "15 EUR/month", api_access:"Up to 1 update per second", support: "Premium live support during trading hours"},
-    {title: "Premium Expert", description: "Ultimate service for the ultimate trader", price: "75 EUR/month", api_access: "Real-time market data", support: "Exclusive 24/7 personal support"},
+    {title: "Premium", description: "Premium access, low price", price: "\u20AC 15 / month", api_access:"Up to 1 update per second", support: "Premium live support during trading hours"},
+    {title: "Premium Expert", description: "Ultimate service for the ultimate trader", price: "\u20AC 75 / month", api_access: "Real-time market data", support: "Exclusive 24/7 personal support"},
   ];
 
   tierDataSource = this.TIERS;

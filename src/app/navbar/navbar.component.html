@@ -6,32 +6,44 @@
   <div class="nav-links" [ngClass]="{ 'show': menuOpen }">
     <button mat-button
             routerLink="/home"
-            routerLinkActive="active">
+            routerLinkActive="active"
+            (click)="toggleMenu()">
       Home
     </button>
     <mat-divider></mat-divider>
     <button mat-button
             routerLink="/xchg"
-            routerLinkActive="active">
+            routerLinkActive="active"
+            (click)="toggleMenu()">
       Exchange
     </button>
     <mat-divider></mat-divider>
     <button mat-button
             routerLink="/search"
-            routerLinkActive="active">
+            routerLinkActive="active"
+            (click)="toggleMenu()">
       Search
     </button>
     <mat-divider></mat-divider>
     <button mat-button
             routerLink="/login"
-            routerLinkActive="active">
+            routerLinkActive="active"
+            (click)="toggleMenu()">
       Log in
     </button>
     <mat-divider></mat-divider>
     <button mat-button
             routerLink="/register"
-            routerLinkActive="active">
+            routerLinkActive="active"
+            (click)="toggleMenu()">
       Register
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-button
+            routerLink="/settings"
+            routerLinkActive="active"
+            (click)="toggleMenu()">
+      Settings
     </button>
   </div>
 </mat-toolbar>

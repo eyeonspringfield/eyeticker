@@ -7,6 +7,7 @@ export const routes: Routes = [
   {path: 'search', loadComponent: () => import('./search/search.component').then(c => c.SearchComponent)},
   {path: 'login', loadComponent: () => import('./login/login.component').then(c => c.LoginComponent)},
   {path: 'register', loadComponent: () => import('./register/register.component').then(c => c.RegisterComponent)},
+  {path: 'settings', loadComponent: () => import('./settings/settings.component').then(c => c.SettingsComponent)},
   {path: '**', redirectTo: '/home', pathMatch: 'full'}
 ];
 

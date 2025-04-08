@@ -2,12 +2,12 @@
 @use '@angular/material' as mat;
 
 #signup-container{
-  margin-top: 20px;
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 80vh;
 
   mat-checkbox{
     @include mat.checkbox-overrides((
@@ -17,7 +17,7 @@
       unselected-focus-icon-color: grey
     ));
 
-    margin: 10px 0;
+    margin: 10px 0 10px 0;
   }
 }
 

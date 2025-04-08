@@ -1,1 +1,19 @@
-<p>login works!</p>
+<div id="login-container">
+  <div id="login">
+    <p>Login</p>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Username</mat-label>
+      <input matInput [(ngModel)]="username" [required]="true">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input type="password" [(ngModel)]="password" matInput [required]="true">
+    </mat-form-field>
+    <div id="buttons">
+      <button mat-flat-button (click)="onLogin()">Login</button>
+    </div>
+  </div>
+
+</div>

@@ -18,24 +18,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     padding: 10px;
     border-radius: 10px;
 
-    @media(min-width: 768px){
+    @media(min-width: 768px) {
       width: 25%;
-    }
-
-    #links {
-      margin-top: 10px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-
-      a {
-        margin: 5px;
-        font-size: 12px;
-      }
-
-      fa-icon {
-        font-size: 7px;
-      }
     }
   }
 }
