@@ -1,0 +1,36 @@
+<div class="ticker-card" [ngClass]="ticker.color">
+  <div class="ticker-header">
+    <h2>{{ ticker.symbol }}</h2>
+    <span class="company-name">{{ ticker.companyName }}</span>
+  </div>
+
+  <div class="ticker-body">
+    <div class="price">
+      ${{ ticker.price.toFixed(2) }}
+      <span [ngClass]="{'positive': ticker.change > 0, 'negative': ticker.change < 0}">
+          ({{ ticker.change > 0 ? '+' : '' }}{{ ticker.change.toFixed(2) }},
+        {{ ticker.changePercent > 0 ? '+' : '' }}{{ ticker.changePercent.toFixed(2) }}%)
+        </span>
+    </div>
+
+    <div class="details">
+      <div><strong>Open:</strong> {{ ticker.open.toFixed(2) }}</div>
+      <div><strong>High:</strong> {{ ticker.high.toFixed(2) }}</div>
+      <div><strong>Low:</strong> {{ ticker.low.toFixed(2) }}</div>
+      <div><strong>Prev Close:</strong> {{ ticker.previousClose.toFixed(2) }}</div>
+      <div><strong>Volume:</strong> {{ ticker.volume | number }}</div>
+      <div><strong>Market Cap:</strong> ${{ ticker.marketCap | number }}</div>
+    </div>
+  </div>
+
+  <div class="sparkline">
+      <span *ngFor="let point of ticker.sparkline" class="spark">
+        <div [style.height]="(point / (ticker | maxSpark) * 50) + 'px'"></div>
+      </span>
+  </div>
+
+  <div class="footer">
+    <span class="sector">{{ ticker.sector }}</span>
+    <span class="exchange">{{ ticker.exchange }}</span>
+  </div>
+</div>

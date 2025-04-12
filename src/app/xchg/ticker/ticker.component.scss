@@ -1,0 +1,97 @@
+.ticker-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  margin: 20px;
+  color: #333;
+  width: 250px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  &.green {
+    border-left: 6px solid #4caf50;
+  }
+
+  &.red {
+    border-left: 6px solid #f44336;
+  }
+
+  .ticker-header {
+    h2 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: #111;
+    }
+
+    .company-name {
+      font-size: 0.9rem;
+      color: #666;
+    }
+  }
+
+  .ticker-body {
+    margin-top: 10px;
+
+    .price {
+      font-size: 1.6rem;
+      font-weight: bold;
+
+      .positive {
+        color: #4caf50;
+      }
+
+      .negative {
+        color: #f44336;
+      }
+    }
+
+    .details {
+      margin-top: 10px;
+      font-size: 0.9rem;
+
+      div {
+        margin: 2px 0;
+      }
+    }
+  }
+
+  .sparkline {
+    display: flex;
+    align-items: flex-end;
+    height: 40px;
+    margin-top: 15px;
+    gap: 2px;
+
+    .spark {
+      flex: 1;
+
+      div {
+        width: 100%;
+        background-color: #00796b;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 0.8rem;
+    color: #777;
+
+    .sector, .exchange {
+      background: #f1f1f1;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+  }
+}

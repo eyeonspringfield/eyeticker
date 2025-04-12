@@ -1,3 +1,7 @@
 <div id="exchange-terminal">
-  <p>Welcome to the exchange! Currently, the exchange is unavailable.</p>
+  <p>Welcome to the exchange! Currently, the exchange is unavailable, but here is a sneak peek!</p>
+
+  <div class="ticker-grid">
+    <app-ticker *ngFor="let ticker of dummyTickers" [ticker]="ticker"></app-ticker>
+  </div>
 </div>
