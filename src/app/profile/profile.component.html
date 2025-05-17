@@ -1,0 +1,17 @@
+<mat-card *ngIf="user; else noUser">
+  <mat-card-title>Your Profile</mat-card-title>
+  <mat-card-content>
+    <p><strong>Username:</strong> {{ username || '—' }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>UID:</strong> {{ user.uid }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="warn" (click)="logout()">
+      Log out
+    </button>
+  </mat-card-actions>
+</mat-card>
+
+<ng-template #noUser>
+  <p>Redirecting to login…</p>
+</ng-template>

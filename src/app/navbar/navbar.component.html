@@ -19,15 +19,9 @@
     </button>
     <mat-divider></mat-divider>
     <button mat-button
-            routerLink="/search"
-            routerLinkActive="active"
-            (click)="toggleMenu()">
-      Search
-    </button>
-    <mat-divider></mat-divider>
-    <button mat-button
             routerLink="/login"
             routerLinkActive="active"
+            *ngIf="!isLoggedIn"
             (click)="toggleMenu()">
       Log in
     </button>
@@ -35,15 +29,17 @@
     <button mat-button
             routerLink="/register"
             routerLinkActive="active"
+            *ngIf="!isLoggedIn"
             (click)="toggleMenu()">
       Register
     </button>
     <mat-divider></mat-divider>
     <button mat-button
-            routerLink="/settings"
+            routerLink="/profile"
             routerLinkActive="active"
+            *ngIf="isLoggedIn"
             (click)="toggleMenu()">
-      Settings
+      Profile
     </button>
   </div>
 </mat-toolbar>
